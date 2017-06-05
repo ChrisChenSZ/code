@@ -1,0 +1,61 @@
+{#{% extends 'base.njk' %}
+
+
+
+{% block content %}
+
+<div class="row">
+
+  {% for file in files %}
+  
+    {{item(file)}}
+  
+  {% endfor %}
+
+</div>
+
+{% endblock %}
+
+
+
+{#设置模版函数#}
+{#{% macro item(name) %}
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="/img/wjj.jpg" alt="...">
+      <div class="caption">
+        <h3>{{name}}</h3>
+        <p><a href={{name}} class="btn btn-primary" role="button">Button</a></p>
+      </div>
+    </div>
+  </div>
+{% endmacro %}#}
+
+{#继承#}
+{%extends "base.njk"%}
+
+{#重写content内容#}
+
+
+{%block content%}
+  <div class="row">
+{#遍历后台传过来的数组#}
+  {%for albumName in albumArr%}
+    {{item(albumName)}}
+  {%endfor%}
+    
+  </div>
+{%endblock%}
+
+{# 定义一个方法,创建一个相册#}
+{%macro item(name)%}
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="/img/wjj.jpg" alt="...">
+      <div class="caption">
+        <h3>{{name}}</h3>
+        <p><a href={{name}} class="btn btn-primary" role="button">进入</a></p>
+      </div>
+    </div>
+  </div>
+{%endmacro%}
