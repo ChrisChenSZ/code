@@ -12,4 +12,18 @@ db.once('open',function(){
 })
 
 
-const xueshenSchema = new 
+const xueshenSchema = new mongoose.Schema({
+  name:String,
+  age:Number
+});
+
+const xueshenModel = db.model('xuesheng',xueshenSchema,'xuesheng');
+
+const xueshenEntity = new xueshenModel({'name':'小强','age':18});
+
+// xueshenEntity.save();
+
+
+xueshenModel.find((err,docs)=>{
+  console.log(docs)
+})
