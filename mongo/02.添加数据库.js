@@ -20,9 +20,13 @@ if(!err){
 
     collection.insertMany([{'name':"我插入的数据1",'name2':'我插入的数据2'},{'name':"我插入的数据1",'name2':'我插入的数据2'}],function(err,result){
       if(!err){
+        
         console.log(result);
+
       }else{
+        
         console.log('插入失败');
+
       }
     })
   }
