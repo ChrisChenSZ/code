@@ -91,16 +91,16 @@ app.post('/PersonalPage.njk', function (req, res) {
                 
                 req.session.user = { 'email': req.body.email, 'password': req.body.password };
                 
-                res.render('PersonalPage.njk', { 'status': "登陆成功" });
+                res.render('personalPage.njk', { 'status': "登陆成功" });
             }
         }else{
             console.log('查询不到');
-             res.render('PersonalPage.njk', { 'status': "密码错误" })
+             res.render('personalPage.njk', { 'status': "密码错误" })
         }
     });
 
     }else{
-         res.render('PersonalPage.njk', { 'status': "请输入账号和密码" })
+         res.render('personalPage.njk', { 'status': "请输入账号和密码" })
     }
     
 })
