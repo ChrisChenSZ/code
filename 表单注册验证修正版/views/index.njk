@@ -1,0 +1,39 @@
+
+{#继承#}
+{%extends "base.njk"%}
+
+{#重写content内容#}
+
+
+{%block content%}
+ <form class="form-horizontal">
+  <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">邮箱</label>
+    <div class="col-sm-4">
+      <input type="email" class="form-control" id="inputEmail3" placeholder="Email" name="email">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+    <div class="col-sm-4">
+      <input type="password" class="form-control " id="inputPassword3" placeholder="Password" name="password">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="remeberMe"> 记住我
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+      <button type="submit" class="btn btn-primary">登陆</button>
+      <a href="register.njk" class="btn btn-default">注册</a>
+      <a href="" class="btn btn-default pull-right">忘记密码？</a>
+    </div>
+  </div>
+</form>
+{%endblock%}

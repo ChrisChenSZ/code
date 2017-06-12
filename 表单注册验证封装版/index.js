@@ -32,7 +32,7 @@ app.use(express.static('albums'));
 
 app.use('/',Router);
 
-app.listen(80, function () {
+app.listen(3000, function () {
 
     console.log('80成功')
 });
