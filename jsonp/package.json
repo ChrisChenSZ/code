@@ -1,0 +1,11 @@
+{
+  "name": "jsonp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3",
+    "request": "^2.81.0",
+    "require": "^2.4.20"
+  }
+}
