@@ -32,8 +32,8 @@ app.use(express.static('albums'));
 
 app.use('/',Router);
 
-app.listen(3000, function () {
+app.listen(8080, function () {
 
-    console.log('80成功')
+    console.log('8080成功')
 });
 
